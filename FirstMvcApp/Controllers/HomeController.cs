@@ -11,13 +11,17 @@ namespace FirstMvcApp.Controllers
         public ActionResult Index()
         {
             return View();
+            //return Content("Hello World!");
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+
+            //return View();
+            return Content("I am a test application!");
+            
         }
 
         public ActionResult Contact()
