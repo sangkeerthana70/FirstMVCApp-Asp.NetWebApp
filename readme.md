@@ -1,0 +1,1 @@
+This repo contains a model MVC app that is created with Mosh's Asp.NetMVC-5 tutorial.
