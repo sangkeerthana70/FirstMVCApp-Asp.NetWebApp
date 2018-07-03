@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FirstMvcApp.Models;
 
 namespace FirstMvcApp.Controllers
 {
@@ -16,12 +17,25 @@ namespace FirstMvcApp.Controllers
         //embed parameter in URL
         public ActionResult Cry(string baby)
         {
-            return Content(baby + "  is crying!");
+            //return Content(baby + "  is crying!");
+            //return View();
+            var myBaby = new Baby()
+            {
+                Name = baby
+            };
+            return View(myBaby);
+
         }
         //test using query string parameter
         public ActionResult Sleep(string baby, int hours)
         {
-            return Content(baby + " was sleeping for " + hours + " hours!");
+            //return Content(baby + " was sleeping for " + hours + " hours!");
+            var babySleepTime = new Baby()
+            {
+                Name = baby,
+                SleepTime = hours
+            };
+            return View(babySleepTime);
         }
     }
 }
