@@ -15,13 +15,15 @@ namespace FirstMvcApp.Controllers
             return View();
         }
         //embed parameter in URL
-        public ActionResult Cry(string baby)
+        public ActionResult Cry(string baby, int sleepTime)
         {
             //return Content(baby + "  is crying!");
             //return View();
             var myBaby = new Baby()
             {
-                Name = baby
+                Name = baby,
+                SleepTime = sleepTime
+
             };
             return View(myBaby);
 
